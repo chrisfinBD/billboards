@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  released_on: 2020-01-06 20:37:28
+  genre: MyString
+  rating: 1.5
+  artist_id: 1
+
+two:
+  title: MyString
+  released_on: 2020-01-06 20:37:28
+  genre: MyString
+  rating: 1.5
+  artist_id: 1
