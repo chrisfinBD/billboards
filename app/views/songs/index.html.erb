@@ -17,7 +17,7 @@
   <tr>
     <td><%= song.id %></td>
     <td><%= song.title %></td>
-    <td><%= @artists.where(id: song.artist).name %></td>
+    <td><%= Artist.where(id: song.artist_id).each do |a| { a.name } %></td>
     <td><%= song.released_on %></td>
     <td><%= song.genre %></td>
     <td><%= song.rating %></td>

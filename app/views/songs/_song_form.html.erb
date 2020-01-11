@@ -15,7 +15,6 @@
   <br/>
   <%= form_thing.text_field(:rating) %>
   <br/>
- <%= form_thing.label(:artist) %>
-
- <%= form_thing.select('artist', 'artist_id', Artist.all.collect { |a| [ a.name, a.id ] }, { prompt: 'Select Artist' }) %>
+ <%= form_thing.label("Artist") %>
+ <%= form_thing.select :artist_id, options_for_select(Artist.all.collect { |a| [ a.name, a.id ] }) %>
 </p>
