@@ -1,0 +1,6 @@
+<% billboards.each do |billboard| %>
+  <div class="billboard-card">
+    <p><%= billboard.body %></p>
+    <date><%= billboard.created_at.to_s(:short) %></date>
+  </div>
+<% end %>
