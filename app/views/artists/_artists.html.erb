@@ -1,0 +1,6 @@
+<% artists.each do |artist| %>
+  <div class="artist-card">
+    <p><%= artist.body %></p>
+    <date><%= artist.created_at.to_s(:short) %></date>
+  </div>
+<% end %>

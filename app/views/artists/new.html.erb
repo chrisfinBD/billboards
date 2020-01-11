@@ -1,0 +1,6 @@
+<%= form_for(@artist) do |f| %>
+
+  <%= render("artist_form", form_thing:f) =%>
+  <%= f.submit("Save") %>
+
+<% end %>
