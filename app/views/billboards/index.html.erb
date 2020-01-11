@@ -1,9 +1,21 @@
+<h1>All BillBoards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Title</td>
+      <td>Country</td>
+    </tr>
+  </thead>
+  <tbody>
+    
 <% @billboards.each do |billboard| %>
-  <p> 
-  <%= billboard.body %>
-  &nbsp;&mdash;&nbsp;
-  <%= link_to("edit", edit_billboard_path(billboard.id)) %>
-  -
-  <%= link_to("delete", billboard_path(billboard.id), method: :delete, data: {confirm: "Are you sure you want to delete #{billboard.id}?"}) %>
-  </p>
+  <tr>
+    <td><%= billboard.id %></td><td><%= billboard.title %></td><td><%= billboard.country %></td>
+    <td><%= link_to("edit", edit_billboard_path(billboard.id)) %></td>
+    <td><%= link_to("delete", billboard_path(billboard.id), method: :delete, data: {confirm: "Are you sure you want to delete #{billboard.id}?"}) %></td>
+  </tr>
 <% end %>
+
+<table>
