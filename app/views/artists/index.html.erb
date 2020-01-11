@@ -1,9 +1,20 @@
+<h1>All Artists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    
 <% @artists.each do |artist| %>
-  <p> 
-  <%= artist.body %>
-  &nbsp;&mdash;&nbsp;
-  <%= link_to("edit", edit_artist_path(artist.id)) %>
-  -
-  <%= link_to("delete", artist_path(artist.id), method: :delete, data: {confirm: "Are you sure you want to delete #{artist.id}?"}) %>
-  </p>
+  <tr>
+    <td><%= artist.id %></td><td><%= artist.name %></td>
+    <td><%= link_to("Edit", edit_artist_path(artist.id)) %></td>
+    <td><%= link_to("Delete", artist_path(artist.id), method: :delete, data: {confirm: "Are you sure you want to delete #{artist.id}?"}) %></td>
+  </tr>
 <% end %>
+
+<table>

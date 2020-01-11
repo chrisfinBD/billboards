@@ -1,3 +1,4 @@
+<h1> Edit Artist # <%= @artist.id %></h1>
 <%= form_for(@artist) do |f| %>
     <%= render("artist_form", form_thing: f) %>
   <%= f.submit("Update") %>
