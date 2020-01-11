@@ -13,8 +13,8 @@
 <% @billboards.each do |billboard| %>
   <tr>
     <td><%= billboard.id %></td><td><%= billboard.title %></td><td><%= billboard.country %></td>
-    <td><%= link_to("edit", edit_billboard_path(billboard.id)) %></td>
-    <td><%= link_to("delete", billboard_path(billboard.id), method: :delete, data: {confirm: "Are you sure you want to delete #{billboard.id}?"}) %></td>
+    <td><%= link_to("Edit", edit_billboard_path(billboard.id)) %></td>
+    <td><%= link_to("Delete", billboard_path(billboard.id), method: :delete, data: {confirm: "Are you sure you want to delete #{billboard.id}?"}) %></td>
   </tr>
 <% end %>
 
