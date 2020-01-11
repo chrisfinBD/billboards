@@ -1,9 +1,29 @@
+<h1>All Songs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Title</td>
+      <td>Artist</td>
+      <td>Release Date</td>
+      <td>Genre</td>
+      <td>Rating</td>
+    </tr>
+  </thead>
+  <tbody>
+    
 <% @songs.each do |song| %>
-  <p> 
-  <%= song.body %>
-  &nbsp;&mdash;&nbsp;
-  <%= link_to("edit", edit_song_path(song.id)) %>
-  -
-  <%= link_to("delete", song_path(song.id), method: :delete, data: {confirm: "Are you sure you want to delete #{song.id}?"}) %>
-  </p>
+  <tr>
+    <td><%= song.id %></td>
+    <td><%= song.title %></td>
+    <td><%= @artists.where(id: song.artist).name %></td>
+    <td><%= song.released_on %></td>
+    <td><%= song.genre %></td>
+    <td><%= song.rating %></td>
+    <td><%= link_to("Edit", edit_song_path(song.id)) %></td>
+    <td><%= link_to("Delete", song_path(song.id), method: :delete, data: {confirm: "Are you sure you want to delete #{song.id}?"}) %></td>
+  </tr>
 <% end %>
+  </tbody>
+<table>
