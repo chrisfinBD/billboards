@@ -1,7 +1,5 @@
 <h1>All Songs</h1>
-<div class="alert alert-info" role="alert">
-  A simple info alert—check it out!
-</div>
+
 <table>
   <thead>
     <tr>
@@ -19,8 +17,8 @@
   <tr>
     <td><%= song.id %></td>
     <td><%= song.title %></td>
-    <td><%= Artist.find_by(id: song.artist_id) %></td>
-    <td><%= song.released_on.strftime("%Y-%m") %></td>
+    <td><%= Artist.find_by(id: 1).name %></td>
+    <td><%= song.released_on %></td>
     <td><%= song.genre %></td>
     <td><%= song.rating %></td>
     <td><%= link_to("Edit", edit_song_path(song.id)) %></td>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Billboards</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+    <nav class="nav nav-pills">
+        <li class="nav-item"><%= link_to("Home", root_path) %></li>
+        <li class="nav-item"><%= link_to("Add New Song", new_song_path) %></li>
+        <li class="nav-item"><%= link_to("Add New Artist", new_artist_path) %></li>
+        <li class="nav-item"><%= link_to("Add New Billboard", new_billboard_path) %></li>
+        <li class="nav-item"><%= link_to("Show Songs", songs_path) %></li>
+        <li class="nav-item"><%= link_to("Show Artists", artists_path) %></li>
+        <li class="nav-item"><%= link_to("Show Billboards", billboards_path) %></li>
+    </nav>
+
+    <%= yield %>
+    </div>
+  </body>
+</html>

@@ -10,7 +10,8 @@
   </head>
 
   <body>
-      <nav>
+    <div class="container">
+    <nav>
         <%= link_to("Home", root_path) %>
         <%= link_to("Add New Song", new_song_path) %>
         <%= link_to("Add New Artist", new_artist_path) %>
@@ -21,5 +22,6 @@
     </nav>
 
     <%= yield %>
+    </div>
   </body>
 </html>
