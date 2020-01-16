@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+
   def index
     @artists = Artist.all.order(id: :asc)
   end
@@ -15,10 +16,17 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    if current_user && current_user.standard?
+      render(plain: "You must be an artist to create new artists.", status: 403)
+    end
     @artist = Artist.new 
   end
 
   def edit
+    #authorize
+    if current_user && current_user.standard?
+      render(plain: "You must be an artist to edit artists.", status: 403)
+   end
     @artist = Artist.find(params[:id])  
   end
 
@@ -42,4 +50,11 @@ class ArtistsController < ApplicationController
   def artist_params
     params.require(:artist).permit(:name)
   end
+  
+  def authorize
+    if current_user && current_user.standard?
+      render(plain: "You must be an artist to edit or create new artists.", status: 403)
+    end
+  end
+
 end

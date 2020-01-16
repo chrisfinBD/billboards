@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
       cookies[:views] = 0
     end
   end
+
 end

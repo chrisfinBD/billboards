@@ -57,4 +57,3 @@ gem 'spotify-client'
 gem 'bootstrap', '~> 4.4.1'
 gem 'devise'
 
-
