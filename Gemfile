@@ -56,4 +56,4 @@ gem 'rspotify'
 gem 'spotify-client'
 gem 'bootstrap', '~> 4.4.1'
 gem 'devise'
-
+gem 'rails_admin', '~> 2.0'
